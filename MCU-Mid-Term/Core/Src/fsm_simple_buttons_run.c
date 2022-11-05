@@ -14,15 +14,15 @@ int counter = 9;
 
 void fsm_simple_buttons_run(){
 	switch(status){
-//	case INIT:
-//		display7SEG(counter);
-//		if(timer1_flag == 1){
-//			HAL_GPIO_TogglePin(Led_Red_GPIO_Port, Led_Red_Pin);
-//			setTimer1(1000);
-//		}
-//
-//		status = NUM0;
-//		break;
+	case INIT:
+		display7SEG(counter);
+		if(timer1_flag == 1){
+			HAL_GPIO_TogglePin(Led_Red_GPIO_Port, Led_Red_Pin);
+			setTimer1(1000);
+		}
+
+		status = NUM0;
+		break;
 	case NUM0:
 		display7SEG(counter);
 		if(timer1_flag == 1){
